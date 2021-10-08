@@ -97,7 +97,7 @@ public class RegistrationPage {
         submitButton.click();
     }
 
-    @Step("Проверяем текст {value}")
+    @Step("Проверяем значение {value}")
     public RegistrationPage checkValue(String value){
         submitTable.shouldHave(text(value));
         return this;
