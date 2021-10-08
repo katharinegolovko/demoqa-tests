@@ -26,7 +26,7 @@ public class TestBase {
     }
 
     @AfterEach
-    public void tearDown() {
+    public void afterAll() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();

@@ -2,6 +2,7 @@ package by.katyagolovko.tests;
 
 import by.katyagolovko.pages.RegistrationPage;
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class PracticeFormTests extends TestBase{
@@ -24,8 +25,8 @@ public class PracticeFormTests extends TestBase{
            city = "Karnal";
 
     @Test
+    @DisplayName("Проверяем заполнение Student Registration Form")
     void fillFormTest(){
-
         registrationPage.openPage();
         registrationPage.setFirstName(firstName)
                         .setLastName(lastName)
