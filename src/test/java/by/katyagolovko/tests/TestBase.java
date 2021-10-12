@@ -27,9 +27,11 @@ public class TestBase {
 
         String username = credentials.username();
         String password = credentials.password();
+        String browserAddress = System.getProperty("browserAddress", "selenoid.autotests.cloud/wd/hub/");
+
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        String selenoidURL = format("https://%s:$s@selenoid.autotests.cloud/wd/hub/", username, password);
+        String selenoidURL = format("https://%s:%s@%s", username, password, browserAddress);
         Configuration.remote = selenoidURL;
         Configuration.baseUrl = "https://demoqa.com";
     }
